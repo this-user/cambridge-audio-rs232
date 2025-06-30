@@ -3,7 +3,7 @@
         "id": "f9bb35b4fee62ea2",
         "type": "tab",
         "label": "Cambridge Audio BluRay Player",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
