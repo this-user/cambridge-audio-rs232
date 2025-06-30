@@ -1,0 +1,1647 @@
+views:
+  - type: sections
+    icon: mdi:audio-video
+    title: Receiver
+    cards: []
+    subview: false
+    sections:
+      - type: grid
+        cards:
+          - type: heading
+            heading: Standby
+            heading_style: title
+            visibility:
+              - condition: state
+                entity: switch.cambridge_audio_av_receiver_power
+                state: 'on'
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: switch.cambridge_audio_av_receiver_power
+            icon: ''
+            show_state: false
+            tap_action:
+              action: toggle
+            hold_action:
+              action: toggle
+            icon_height: 75px
+            grid_options:
+              columns: 6
+              rows: 2
+          - type: heading
+            heading: Volume
+            heading_style: title
+            visibility:
+              - condition: state
+                entity: switch.cambridge_audio_av_receiver_power
+                state: 'on'
+          - type: horizontal-stack
+            cards:
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: button.cambridge_audio_av_receiver_volume_down
+                icon: ''
+                show_state: false
+                tap_action:
+                  action: toggle
+                icon_height: 75px
+                name: Lautstärke
+                grid_options:
+                  rows: 1
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: button.cambridge_audio_av_receiver_volume_up
+                icon: ''
+                show_state: false
+                tap_action:
+                  action: toggle
+                icon_height: 75px
+                name: Lautstärke
+                grid_options:
+                  rows: 1
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: switch.cambridge_audio_av_receiver_mute
+                icon: ''
+                show_state: false
+                tap_action:
+                  action: toggle
+                icon_height: 75px
+                name: Stumm
+                grid_options:
+                  rows: 1
+            visibility:
+              - condition: state
+                entity: switch.cambridge_audio_av_receiver_power
+                state: 'on'
+          - type: heading
+            heading: Bass
+            heading_style: title
+            visibility:
+              - condition: state
+                entity: switch.cambridge_audio_av_receiver_power
+                state: 'on'
+          - type: horizontal-stack
+            cards:
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: button.cambridge_audio_av_receiver_bass_down
+                icon: mdi:minus
+                show_state: false
+                tap_action:
+                  action: toggle
+                name: Bass
+                icon_height: 75px
+                hold_action:
+                  action: none
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: button.cambridge_audio_av_receiver_bass_up
+                icon: mdi:plus
+                show_state: false
+                tap_action:
+                  action: toggle
+                name: Bass
+                icon_height: 75px
+                hold_action:
+                  action: none
+            grid_options:
+              columns: 6
+              rows: 1
+            visibility:
+              - condition: state
+                entity: switch.cambridge_audio_av_receiver_power
+                state: 'on'
+          - type: heading
+            heading: Treble
+            heading_style: title
+            visibility:
+              - condition: state
+                entity: switch.cambridge_audio_av_receiver_power
+                state: 'on'
+          - type: horizontal-stack
+            cards:
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: button.cambridge_audio_av_receiver_treble_down
+                icon: mdi:minus
+                show_state: false
+                tap_action:
+                  action: toggle
+                name: Treble
+                icon_height: 75px
+                hold_action:
+                  action: none
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: button.cambridge_audio_av_receiver_treble_up
+                icon: mdi:plus
+                show_state: false
+                tap_action:
+                  action: toggle
+                name: Treble
+                icon_height: 75px
+                hold_action:
+                  action: none
+            grid_options:
+              columns: 6
+              rows: 1
+            visibility:
+              - condition: state
+                entity: switch.cambridge_audio_av_receiver_power
+                state: 'on'
+        column_span: 1
+      - type: grid
+        cards:
+          - type: heading
+            heading: Inputs
+            heading_style: title
+          - type: entities
+            entities:
+              - entity: select.cambridge_audio_av_receiver_input
+                name: Source
+              - entity: select.cambridge_audio_av_receiver_audio_source
+                name: Audio In
+          - type: heading
+            heading: Amplifier
+            heading_style: title
+          - type: entities
+            entities:
+              - entity: select.cambridge_audio_av_receiver_dynamic_range
+                name: Dynamic Range
+              - entity: number.cambridge_audio_av_receiver_lfe_trim
+                name: LFE Trim
+            show_header_toggle: false
+          - type: horizontal-stack
+            cards:
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: button.cambridge_audio_av_receiver_analogue_stereo_direct
+                name: Analogue Direct
+                icon: ''
+                show_state: false
+                tap_action:
+                  action: toggle
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: switch.cambridge_audio_av_receiver_subwoofer
+                name: Stereo Mode
+                icon: ''
+                show_state: false
+                tap_action:
+                  action: toggle
+                hold_action:
+                  action: toggle
+                icon_height: 75px
+            grid_options:
+              columns: 12
+              rows: 1
+          - type: tile
+            entity: sensor.cambridge_audio_av_receiver_surround_mode_status
+            features_position: bottom
+            vertical: false
+            name: Surround Mode
+            icon: mdi:surround-sound
+            grid_options:
+              columns: full
+            tap_action:
+              action: perform-action
+              perform_action: button.press
+              target:
+                entity_id: button.cambridge_audio_av_receiver_next_surround_mode
+        visibility:
+          - condition: state
+            entity: switch.cambridge_audio_av_receiver_power
+            state: 'on'
+      - type: grid
+        cards:
+          - type: heading
+            heading: Menu
+            heading_style: title
+          - show_name: true
+            show_icon: true
+            type: button
+            icon: ''
+            show_state: false
+            tap_action:
+              action: toggle
+            entity: button.cambridge_audio_av_receiver_osd_on
+            name: On/Off
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_osd_left
+            name: Links
+            icon: mdi:arrow-left-bold
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_osd_right
+            name: Rechts
+            icon: mdi:arrow-right-bold
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_osd_down
+            name: Runter
+            icon: mdi:arrow-down-bold
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_osd_up
+            name: Hoch
+            icon: mdi:arrow-up-bold
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_osd_back
+            name: Zurück
+            icon: mdi:keyboard-return
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+            grid_options:
+              columns: 6
+              rows: 2
+          - show_name: true
+            show_icon: false
+            type: button
+            entity: button.cambridge_audio_av_receiver_osd_enter
+            name: Enter
+            icon: ''
+            show_state: false
+            tap_action:
+              action: toggle
+            grid_options:
+              columns: 6
+              rows: 2
+        visibility:
+          - condition: state
+            entity: switch.cambridge_audio_av_receiver_power
+            state: 'on'
+      - type: grid
+        cards:
+          - type: heading
+            heading_style: title
+            heading: Tuner
+          - type: entities
+            entities:
+              - entity: select.cambridge_audio_av_receiver_display_mode
+                name: Display mode
+              - entity: select.cambridge_audio_av_receiver_audio_mode
+                name: Stereo / Mono
+              - entity: select.cambridge_audio_av_receiver_pty
+                name: PTY
+              - entity: select.cambridge_audio_av_receiver_select_preset
+                name: Preset
+              - entity: select.cambridge_audio_av_receiver_tuner_band
+                name: Band
+              - entity: select.cambridge_audio_av_receiver_tuner_mode
+                name: Tuner Nide
+            show_header_toggle: false
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_tuner_up
+            name: Frequency
+            icon: mdi:arrow-up-bold
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+            visibility:
+              - condition: state
+                entity: select.cambridge_audio_av_receiver_tuner_mode
+                state: Frequenz
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_tuner_down
+            name: Frequency
+            icon: mdi:arrow-down-bold
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+            visibility:
+              - condition: state
+                entity: select.cambridge_audio_av_receiver_tuner_mode
+                state: Frequenz
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_tuner_up
+            name: Search
+            icon: mdi:arrow-up-bold
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+            visibility:
+              - condition: state
+                entity: select.cambridge_audio_av_receiver_tuner_mode
+                state: Suche
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_tuner_down
+            name: Search
+            icon: mdi:arrow-down-bold
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+            visibility:
+              - condition: state
+                entity: select.cambridge_audio_av_receiver_tuner_mode
+                state: Suche
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_tuner_up
+            name: Preset
+            icon: mdi:arrow-up-bold
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+            visibility:
+              - condition: state
+                entity: select.cambridge_audio_av_receiver_tuner_mode
+                state: Sendeplatz
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_tuner_down
+            name: Preset
+            icon: mdi:arrow-down-bold
+            show_state: false
+            tap_action:
+              action: toggle
+            icon_height: 75px
+            visibility:
+              - condition: state
+                entity: select.cambridge_audio_av_receiver_tuner_mode
+                state: Sendeplatz
+          - type: entities
+            entities:
+              - entity: binary_sensor.cambridge_audio_av_receiver_auto_search
+                icon: mdi:scanner
+                name: Searching
+              - entity: sensor.cambridge_audio_av_receiver_found_frequency
+                name: Frequency
+                icon: mdi:radio-tower
+            show_header_toggle: false
+            visibility:
+              - condition: state
+                entity: select.cambridge_audio_av_receiver_tuner_mode
+                state: Suche
+            title: Frequency scan
+          - show_name: true
+            show_icon: true
+            type: button
+            entity: select.cambridge_audio_av_receiver_store_preset
+            tap_action:
+              action: perform-action
+              perform_action: script.cba_av_receiver_store_preset
+              target: {}
+            name: Store frequency
+            icon_height: 75px
+            hold_action:
+              action: none
+            visibility:
+              - condition: state
+                entity: binary_sensor.cambridge_audio_av_receiver_auto_search
+                state_not: 'on'
+              - condition: state
+                entity: select.cambridge_audio_av_receiver_tuner_mode
+                state: Suche
+              - condition: or
+                conditions:
+                  - condition: state
+                    entity: select.cambridge_audio_av_receiver_tuner_mode
+                    state: Frequenz
+            grid_options:
+              columns: full
+        visibility:
+          - condition: state
+            entity: switch.cambridge_audio_av_receiver_power
+            state: 'on'
+      - type: grid
+        cards:
+          - type: heading
+            heading: Lip Sync
+            heading_style: title
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_lip_sync_down
+            icon: mdi:minus
+            show_state: false
+            tap_action:
+              action: toggle
+            name: Lip Sync
+            icon_height: 75px
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: button.cambridge_audio_av_receiver_lip_sync_up
+            icon: mdi:plus
+            show_state: false
+            tap_action:
+              action: toggle
+            name: Lip Sync
+            icon_height: 75px
+        visibility:
+          - condition: state
+            entity: switch.cambridge_audio_av_receiver_power
+            state: 'on'
+      - type: grid
+        cards: []
+        column_span: 1
+    header:
+      card:
+        type: markdown
+        content: Azur 551R
+        title: Receiver
+        text_only: true
+      layout: center
+      badges_position: bottom
+      badges_wrap: wrap
+    badges:
+      - type: entity
+        show_name: false
+        show_state: true
+        show_icon: true
+        entity: switch.cambridge_audio_av_receiver_power
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: select.cambridge_audio_av_receiver_input
+        name: Input
+        visibility:
+          - condition: state
+            entity: switch.cambridge_audio_av_receiver_power
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: select.cambridge_audio_av_receiver_audio_source
+        name: Audio In
+        visibility:
+          - condition: state
+            entity: switch.cambridge_audio_av_receiver_power
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_av_receiver_volume
+        show_entity_picture: false
+        name: Volume
+        tap_action:
+          action: none
+        visibility:
+          - condition: state
+            entity: switch.cambridge_audio_av_receiver_power
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_av_receiver_bass
+        show_entity_picture: false
+        name: Bass
+        tap_action:
+          action: none
+        visibility:
+          - condition: state
+            entity: switch.cambridge_audio_av_receiver_power
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_av_receiver_treble
+        show_entity_picture: false
+        name: Treble
+        tap_action:
+          action: none
+        visibility:
+          - condition: state
+            entity: switch.cambridge_audio_av_receiver_power
+            state: 'on'
+    max_columns: 3
+    dense_section_placement: true
+  - type: sections
+    max_columns: 3
+    title: Blu-Ray
+    sections:
+      - type: grid
+        cards:
+          - type: heading
+            heading: Standby
+            heading_style: title
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            icon: ''
+            show_state: false
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: POW
+            hold_action:
+              action: none
+            icon_height: 75px
+            grid_options:
+              columns: 6
+              rows: 2
+            name: Standby
+          - type: heading
+            heading: Disc
+            heading_style: title
+            visibility:
+              - condition: state
+                entity: binary_sensor.cambridge_audio_blu_ray_power_status
+                state: 'on'
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 120px
+            icon: mdi:eject
+            name: Disc
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: EJT
+            grid_options:
+              columns: 6
+              rows: 2
+            hold_action:
+              action: none
+            visibility:
+              - condition: state
+                entity: binary_sensor.cambridge_audio_blu_ray_power_status
+                state: 'on'
+          - type: heading
+            heading: Input
+            heading_style: title
+            visibility:
+              - condition: state
+                entity: binary_sensor.cambridge_audio_blu_ray_power_status
+                state: 'on'
+          - type: entities
+            entities:
+              - entity: input_select.cambridge_audio_bluray_input_sources
+                name: Input
+            show_header_toggle: false
+            visibility:
+              - condition: state
+                entity: binary_sensor.cambridge_audio_blu_ray_power_status
+                state: 'on'
+      - type: grid
+        cards:
+          - type: heading
+            heading: Play
+            heading_style: title
+          - type: horizontal-stack
+            cards:
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:play-circle-outline
+                name: Play
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: PLA
+                hold_action:
+                  action: none
+                grid_options:
+                  columns: 6
+                  rows: 2
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:pause-circle-outline
+                name: Pause
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: PAU
+                hold_action:
+                  action: none
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:stop-circle-outline
+                name: Stop
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: STP
+                hold_action:
+                  action: none
+                grid_options:
+                  columns: 6
+                  rows: 2
+          - type: horizontal-stack
+            cards:
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:skip-previous
+                name: Previous
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: PRE
+                hold_action:
+                  action: none
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:skip-next
+                name: Next
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: NXT
+                hold_action:
+                  action: none
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:rewind
+                name: Fast Reverse
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: REV
+                hold_action:
+                  action: none
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:fast-forward
+                name: Fast Forward
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: FWD
+                hold_action:
+                  action: none
+          - type: horizontal-stack
+            hidden: true
+            cards:
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                show_state: false
+                icon_height: 75px
+                name: Lautstärke
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: VDN
+                icon: mdi:volume-minus
+                hold_action:
+                  action: none
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                show_state: false
+                icon_height: 75px
+                name: Lautstärke
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: VUP
+                icon: mdi:volume-plus
+                hold_action:
+                  action: none
+              - show_name: false
+                show_icon: true
+                type: button
+                entity: binary_sensor.cambridge_audio_blu_ray_muted
+                show_state: false
+                icon_height: 75px
+                name: Stumm
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: MUT
+                icon: ''
+                hold_action:
+                  action: none
+            visibility:
+              - condition: state
+                entity: ''
+                state: ''
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: grid
+        cards:
+          - type: heading
+            heading: Select
+            heading_style: title
+          - show_name: true
+            show_icon: false
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:information-box
+            name: Info
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: OSD
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:numeric-1-box-outline
+            name: '1'
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NU1
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:numeric-2-box-outline
+            name: '2'
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NU2
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:numeric-3-box-outline
+            name: '3'
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NU3
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:triangle
+            name: Page Up
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: PUP
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:numeric-4-box-outline
+            name: '4'
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NU4
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:numeric-5-box-outline
+            name: '5'
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NU5
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:numeric-6-box-outline
+            name: '6'
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NU6
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:triangle-down
+            name: Page Down
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: PDN
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:numeric-7-box-outline
+            name: '7'
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NU7
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:numeric-8-box-outline
+            name: '8'
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NU8
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:numeric-9-box-outline
+            name: '9'
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NU9
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:home
+            name: Home
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: HOM
+            hold_action:
+              action: none
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:numeric-0-box-outline
+            name: '0'
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NU0
+            hold_action:
+              action: none
+          - show_name: true
+            show_icon: false
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: ''
+            name: Go To
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: GOT
+            hold_action:
+              action: none
+          - show_name: true
+            show_icon: false
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:backspace
+            name: Clear
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: CLR
+            hold_action:
+              action: none
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: grid
+        cards:
+          - type: heading
+            heading: Menus
+            heading_style: title
+          - type: horizontal-stack
+            cards:
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Top Menu
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: TTL
+                hold_action:
+                  action: none
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Pop Up Menu
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: MNU
+                hold_action:
+                  action: none
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Setup Menu
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: SET
+                hold_action:
+                  action: none
+            grid_options:
+              columns: 12
+              rows: 1
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:arrow-left-bold
+            name: Links
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NLT
+            hold_action:
+              action: none
+            grid_options:
+              columns: 6
+              rows: 2
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:arrow-right-bold
+            name: Rechts
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NRT
+            hold_action:
+              action: none
+            grid_options:
+              columns: 6
+              rows: 2
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:arrow-down-bold
+            name: Runter
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NDN
+            hold_action:
+              action: none
+            grid_options:
+              columns: 6
+              rows: 2
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:arrow-up-bold
+            name: Hoch
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: NUP
+            hold_action:
+              action: none
+            grid_options:
+              columns: 6
+              rows: 2
+          - show_name: false
+            show_icon: true
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:keyboard-return
+            name: Zurück
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: RET
+            hold_action:
+              action: none
+            grid_options:
+              columns: 6
+              rows: 2
+          - show_name: true
+            show_icon: false
+            type: button
+            entity: text.cambridge_audio_bluray_command_buffer
+            icon_height: 75px
+            icon: mdi:keyboard-return
+            name: Enter
+            tap_action:
+              action: perform-action
+              perform_action: text.set_value
+              target:
+                entity_id: text.cambridge_audio_bluray_command_buffer
+              data:
+                value: SEL
+            hold_action:
+              action: none
+            grid_options:
+              columns: 6
+              rows: 2
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: grid
+        cards:
+          - type: heading
+            heading: Settings
+            heading_style: title
+          - type: horizontal-stack
+            cards:
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Pure Audio
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: PUR
+                hold_action:
+                  action: none
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Sound Track
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: AUD
+                hold_action:
+                  action: none
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Subtitle
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: SUB
+                hold_action:
+                  action: none
+            grid_options:
+              columns: 12
+              rows: 1
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                show_name: false
+                show_icon: false
+                entity: text.cambridge_audio_bluray_command_buffer
+                name: Rot
+                color_type: card
+                color: red
+                styles:
+                  card:
+                    - height: 60px
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: RED
+                hold_action:
+                  action: none
+              - type: custom:button-card
+                show_name: false
+                show_icon: false
+                entity: text.cambridge_audio_bluray_command_buffer
+                name: Gruen
+                color_type: card
+                color: green
+                styles:
+                  card:
+                    - height: 60px
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: GRN
+                hold_action:
+                  action: none
+              - type: custom:button-card
+                show_name: false
+                show_icon: false
+                entity: text.cambridge_audio_bluray_command_buffer
+                name: Blau
+                color_type: card
+                color: blue
+                styles:
+                  card:
+                    - height: 60px
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: BLU
+                hold_action:
+                  action: none
+              - type: custom:button-card
+                show_name: false
+                show_icon: false
+                entity: text.cambridge_audio_bluray_command_buffer
+                name: Gelb
+                color_type: card
+                color: yellow
+                styles:
+                  card:
+                    - height: 60px
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: YLW
+                hold_action:
+                  action: none
+          - type: horizontal-stack
+            cards:
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: A/B
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: ATB
+                hold_action:
+                  action: none
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Repeat
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: RPT
+                hold_action:
+                  action: none
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: TV Type
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: SYS
+                hold_action:
+                  action: none
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Dim
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: DIM
+                hold_action:
+                  action: none
+            grid_options:
+              columns: 12
+              rows: 1
+          - type: horizontal-stack
+            cards:
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Angle
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: ANG
+                hold_action:
+                  action: none
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Zoom
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: ZOM
+                hold_action:
+                  action: none
+              - show_name: true
+                show_icon: false
+                type: button
+                entity: text.cambridge_audio_bluray_command_buffer
+                icon_height: 75px
+                icon: mdi:television-classic
+                name: Res
+                tap_action:
+                  action: perform-action
+                  perform_action: text.set_value
+                  target:
+                    entity_id: text.cambridge_audio_bluray_command_buffer
+                  data:
+                    value: HDM
+                hold_action:
+                  action: none
+            grid_options:
+              columns: 12
+              rows: 1
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+    icon: mdi:disc-player
+    cards: []
+    header:
+      card:
+        type: markdown
+        text_only: true
+        content: Azur 725BD
+      layout: center
+      badges_position: bottom
+      badges_wrap: wrap
+    badges:
+      - type: entity
+        show_name: false
+        show_state: true
+        show_icon: true
+        entity: binary_sensor.cambridge_audio_blu_ray_power_status
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_blu_ray_playback_status
+        name: Status
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: binary_sensor.cambridge_audio_blu_ray_muted
+        name: Mute
+        show_entity_picture: false
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_blu_ray_input_source
+        name: Input
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_blu_ray_disc_type
+        name: Disc Type
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_blu_ray_title
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+        name: Title
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_blu_ray_chapter
+        name: Chapter
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_blu_ray_audio_channels
+        name: Audio
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_blu_ray_audio_language
+        name: Language
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_blu_ray_audio_track
+        name: Audio Track
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
+      - type: entity
+        show_name: true
+        show_state: true
+        show_icon: true
+        entity: sensor.cambridge_audio_blu_ray_audio_type
+        name: Audio Type
+        visibility:
+          - condition: state
+            entity: binary_sensor.cambridge_audio_blu_ray_power_status
+            state: 'on'
