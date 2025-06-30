@@ -1,0 +1,4432 @@
+[
+    {
+        "id": "3ce791068671bcc1",
+        "type": "tab",
+        "label": "Cambridge Audio AV Receiver",
+        "disabled": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ddbb14922d2337c0",
+        "type": "group",
+        "z": "3ce791068671bcc1",
+        "name": "Cambridge AV Receiver Control",
+        "style": {
+            "label": true,
+            "fill": "#e3f3e3",
+            "color": "#000000"
+        },
+        "nodes": [
+            "b5efd0977abf6232",
+            "d314aa6fadbf8e5a",
+            "2b82dfaae4d315c0",
+            "c460bf8e62300f50",
+            "d3ec5d3ab5a228f5",
+            "fc1085c71c185896",
+            "017a65c2eb565efe",
+            "2933317d0d1e0923",
+            "6f0ffd74e30b0619",
+            "1bbd0438ed382f13",
+            "fa5badf67352bf1d",
+            "b8b5f6958fccf44e",
+            "ff1cc6937b3906f2",
+            "a5ba601e1d1538eb",
+            "15fc23638fb5f665",
+            "5bf8e60463620a89",
+            "3d1adf4583287ea1",
+            "d13fd01d29dbc825"
+        ],
+        "x": 8,
+        "y": 33,
+        "w": 2144,
+        "h": 1815.5
+    },
+    {
+        "id": "c460bf8e62300f50",
+        "type": "group",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Source",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "4d1778586b60c7fa",
+            "3f20b2c75bd8ee5d",
+            "976710795828cb01",
+            "ffe94c3271c2ef55",
+            "d5257a0ea5108aab",
+            "77e15192d8535fce"
+        ],
+        "x": 754,
+        "y": 59,
+        "w": 252,
+        "h": 382
+    },
+    {
+        "id": "d3ec5d3ab5a228f5",
+        "type": "group",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Amplifier",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "5aa978370b0656ba",
+            "9b8c9662b158fbdf",
+            "fc3997cad72a3683",
+            "b197e15d1352352c",
+            "74c69575dca6d4f0",
+            "b04633c590113867",
+            "3a77bc46bea43893",
+            "02ad6f2fe52ecd03",
+            "db62b1f0eb621837",
+            "a238e7519e87fd8e",
+            "c80554f2cf6980c8",
+            "b2c4c79301000954",
+            "e4d8d8efd06e01f0",
+            "44b24035dc2c0698",
+            "4129eed0542795e3",
+            "e68e184840778a10",
+            "3819a635efe7ea87",
+            "7c4d885012c24c95",
+            "cf6ea097474295ba",
+            "aacbfc8854063776",
+            "60d019e57dbc2c6c",
+            "ebc7590d36272479",
+            "9b4d4b490135cf47",
+            "d53ce8c9919e7e3c",
+            "f938544aeba62c3b",
+            "c686b778e34ee3bf",
+            "61289f2157fd13ad",
+            "46571e4b62ecdff9",
+            "2ab6ca68b13f4205"
+        ],
+        "x": 34,
+        "y": 59,
+        "w": 692,
+        "h": 922
+    },
+    {
+        "id": "fc1085c71c185896",
+        "type": "group",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Tuner",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "23b2d79110ae58f1",
+            "8aaaff9338c3e83f",
+            "59927c60e7d3a320",
+            "7851216b2a9e0446",
+            "db1b6c850bd0141f",
+            "bffbbd8386e6553a",
+            "5c805338576ab69f",
+            "fbd7ce3f6afb86b1",
+            "efa7d8a87090b6f8",
+            "1a47ddc05dc6a0e5",
+            "37c08769fcd1ced5",
+            "9c52af59a28f1218",
+            "2258067cd5fbd392",
+            "ce02dd87369e66c4",
+            "39fc6ee6dacb3804",
+            "ee52d964905527d1",
+            "c54a336e61dbf3c1",
+            "887751652342839f",
+            "4f62bfda638575b3",
+            "b9298c7412bb21d3",
+            "3e705b68a3f761f3",
+            "9cdb1b68d7dbfcc4",
+            "8c1cc8f5563488d5",
+            "77cbe4492ab79e07",
+            "ab2320f8e13fb870",
+            "c9f5f92a0a7ad0ba",
+            "fd520b7192c1c8ba",
+            "6cc5f608282fcf96"
+        ],
+        "x": 1034,
+        "y": 59,
+        "w": 792,
+        "h": 1442
+    },
+    {
+        "id": "017a65c2eb565efe",
+        "type": "group",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Audio Processing",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "2523e798dcdc52b8",
+            "fefe46c1eae6711f",
+            "2b9a786528e78be6",
+            "76c74fd97465f0ea",
+            "c3e18c888acfc9c5",
+            "29ab36ed65b3555b"
+        ],
+        "x": 1834,
+        "y": 59,
+        "w": 292,
+        "h": 422
+    },
+    {
+        "id": "b5efd0977abf6232",
+        "type": "switch",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Route Inbound",
+        "property": "payload.group",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 6,
+        "x": 580,
+        "y": 1700,
+        "wires": [
+            [
+                "fa5badf67352bf1d"
+            ],
+            [
+                "b8b5f6958fccf44e"
+            ],
+            [
+                "c9f5f92a0a7ad0ba"
+            ],
+            [
+                "ff1cc6937b3906f2"
+            ],
+            [
+                "15fc23638fb5f665"
+            ],
+            [
+                "a5ba601e1d1538eb"
+            ]
+        ]
+    },
+    {
+        "id": "fd520b7192c1c8ba",
+        "type": "debug",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "d314aa6fadbf8e5a",
+        "type": "tcp request",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "AV Receiver",
+        "server": "192.168.178.12",
+        "port": "23",
+        "out": "sit",
+        "ret": "string",
+        "splitc": " ",
+        "newline": "\\r",
+        "trim": false,
+        "tls": "",
+        "x": 550,
+        "y": 1420,
+        "wires": [
+            [
+                "1bbd0438ed382f13"
+            ]
+        ]
+    },
+    {
+        "id": "2b82dfaae4d315c0",
+        "type": "delay",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "4",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 630,
+        "y": 1320,
+        "wires": [
+            [
+                "d314aa6fadbf8e5a"
+            ]
+        ]
+    },
+    {
+        "id": "5aa978370b0656ba",
+        "type": "ha-switch",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Power",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
+        "entityConfig": "063bd51e5f5ec001",
+        "enableInput": true,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 350,
+        "y": 100,
+        "wires": [
+            [
+                "d53ce8c9919e7e3c"
+            ],
+            [
+                "d53ce8c9919e7e3c"
+            ]
+        ]
+    },
+    {
+        "id": "9b8c9662b158fbdf",
+        "type": "ha-switch",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Mute",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
+        "entityConfig": "416f403c3d08a097",
+        "enableInput": true,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "11",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 350,
+        "y": 340,
+        "wires": [
+            [
+                "d53ce8c9919e7e3c"
+            ],
+            [
+                "d53ce8c9919e7e3c"
+            ]
+        ]
+    },
+    {
+        "id": "fc3997cad72a3683",
+        "type": "ha-select",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Dynamic Range",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "489972e4e58595b8",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "12",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 380,
+        "y": 820,
+        "wires": [
+            [
+                "c686b778e34ee3bf"
+            ]
+        ]
+    },
+    {
+        "id": "4d1778586b60c7fa",
+        "type": "ha-select",
+        "z": "3ce791068671bcc1",
+        "g": "c460bf8e62300f50",
+        "name": "Input Source",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "f3e01b3b699df6fd",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 850,
+        "y": 100,
+        "wires": [
+            [
+                "77e15192d8535fce"
+            ]
+        ]
+    },
+    {
+        "id": "3f20b2c75bd8ee5d",
+        "type": "ha-select",
+        "z": "3ce791068671bcc1",
+        "g": "c460bf8e62300f50",
+        "name": "Audio Source",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "adb98d3efe5a6918",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "4",
+                "valueType": "str"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 850,
+        "y": 220,
+        "wires": [
+            [
+                "d5257a0ea5108aab"
+            ]
+        ]
+    },
+    {
+        "id": "976710795828cb01",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "c460bf8e62300f50",
+        "name": "Next Input Source",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "dbf2e2716c3b5def",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            }
+        ],
+        "x": 870,
+        "y": 160,
+        "wires": [
+            [
+                "ffe94c3271c2ef55"
+            ]
+        ]
+    },
+    {
+        "id": "23b2d79110ae58f1",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Frequency Up",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "3dcd649e8865943f",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            }
+        ],
+        "x": 1510,
+        "y": 160,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "8aaaff9338c3e83f",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Frequency Down",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "2dfc1ab9abc9ecc2",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "3",
+                "valueType": "num"
+            }
+        ],
+        "x": 1520,
+        "y": 220,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "59927c60e7d3a320",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Tuner Up",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "7050a2ca7b9d1dea",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "4",
+                "valueType": "num"
+            }
+        ],
+        "x": 1500,
+        "y": 340,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "7851216b2a9e0446",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Tuner Down",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "f35f78dfc9278967",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "5",
+                "valueType": "num"
+            }
+        ],
+        "x": 1510,
+        "y": 400,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "db1b6c850bd0141f",
+        "type": "ha-select",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Select Station Preset",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "69312370d3661be2",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "12",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 1540,
+        "y": 760,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "bffbbd8386e6553a",
+        "type": "ha-select",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Tuner PTY",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "8c38c37375ef2839",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "10",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 1500,
+        "y": 640,
+        "wires": [
+            [
+                "9cdb1b68d7dbfcc4"
+            ]
+        ]
+    },
+    {
+        "id": "5c805338576ab69f",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Get Frequency",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "984209e13b41b8b7",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "14",
+                "valueType": "num"
+            }
+        ],
+        "x": 1520,
+        "y": 880,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "fbd7ce3f6afb86b1",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Get Station Name",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "a305d49c9f1c86b4",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "15",
+                "valueType": "num"
+            }
+        ],
+        "x": 1530,
+        "y": 940,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "efa7d8a87090b6f8",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Get PTY",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "858212e35ae8cea7",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "16",
+                "valueType": "num"
+            }
+        ],
+        "x": 1500,
+        "y": 1000,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "1a47ddc05dc6a0e5",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Stop PTY Select",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "d379e93b47181d48",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "17",
+                "valueType": "num"
+            }
+        ],
+        "x": 1520,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2523e798dcdc52b8",
+        "type": "ha-switch",
+        "z": "3ce791068671bcc1",
+        "g": "017a65c2eb565efe",
+        "name": "Subwoofer",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 2,
+        "entityConfig": "c730db851fd563ae",
+        "enableInput": false,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "entityState"
+            }
+        ],
+        "x": 1920,
+        "y": 100,
+        "wires": [
+            [
+                "29ab36ed65b3555b"
+            ],
+            [
+                "29ab36ed65b3555b"
+            ]
+        ]
+    },
+    {
+        "id": "fefe46c1eae6711f",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "017a65c2eb565efe",
+        "name": "Cycle Audio Modes",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "c69105854f220e9b",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "3",
+                "valueType": "num"
+            }
+        ],
+        "x": 1950,
+        "y": 160,
+        "wires": [
+            [
+                "c3e18c888acfc9c5"
+            ]
+        ]
+    },
+    {
+        "id": "2b9a786528e78be6",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "017a65c2eb565efe",
+        "name": "Get DD/DTS Mode",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "1853e3761acc2bd8",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "5",
+                "valueType": "num"
+            }
+        ],
+        "x": 1950,
+        "y": 220,
+        "wires": [
+            [
+                "c3e18c888acfc9c5"
+            ]
+        ]
+    },
+    {
+        "id": "76c74fd97465f0ea",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "017a65c2eb565efe",
+        "name": "Analogue Stereo Direct",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "c5b7c41191ba69f1",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "6",
+                "valueType": "num"
+            }
+        ],
+        "x": 1960,
+        "y": 280,
+        "wires": [
+            [
+                "c3e18c888acfc9c5"
+            ]
+        ]
+    },
+    {
+        "id": "b197e15d1352352c",
+        "type": "ha-sensor",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Volume Level",
+        "entityConfig": "5c2f59ab7dc1046f",
+        "version": 0,
+        "state": "payload.data",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 360,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "74c69575dca6d4f0",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Volume Up",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "e0cee630aa70af89",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "2",
+                "valueType": "num"
+            }
+        ],
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "b04633c590113867",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Volume Down",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "b990ed53dcdfd476",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "3",
+                "valueType": "num"
+            }
+        ],
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "3a77bc46bea43893",
+        "type": "ha-sensor",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Bass Level",
+        "entityConfig": "5d11a78a5dd65e04",
+        "version": 0,
+        "state": "payload.data",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 350,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02ad6f2fe52ecd03",
+        "type": "ha-sensor",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Treble Level",
+        "entityConfig": "057af03405e119e0",
+        "version": 0,
+        "state": "payload.data",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 350,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db62b1f0eb621837",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Bass Up",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "aa6f870c21486d43",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "4",
+                "valueType": "num"
+            }
+        ],
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "a238e7519e87fd8e",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Bass Down",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "7d11e6b3b952c95d",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "5",
+                "valueType": "num"
+            }
+        ],
+        "x": 370,
+        "y": 520,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "c80554f2cf6980c8",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Treble Up",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "77572f408f344549",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "6",
+                "valueType": "num"
+            }
+        ],
+        "x": 360,
+        "y": 640,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "b2c4c79301000954",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Treble Down",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "851aac6c04dafcc9",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "7",
+                "valueType": "num"
+            }
+        ],
+        "x": 370,
+        "y": 700,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "e4d8d8efd06e01f0",
+        "type": "ha-number",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "LFE Trim",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "7633b124dbf32b1e",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "10",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 360,
+        "y": 760,
+        "wires": [
+            [
+                "f938544aeba62c3b"
+            ]
+        ]
+    },
+    {
+        "id": "44b24035dc2c0698",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "OSD On",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "4b9557fb16e56516",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "13",
+                "valueType": "num"
+            }
+        ],
+        "x": 580,
+        "y": 100,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "4129eed0542795e3",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "OSD Back",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "edcd1521f128e0ad",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "14",
+                "valueType": "num"
+            }
+        ],
+        "x": 580,
+        "y": 160,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "e68e184840778a10",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "OSD Up",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "35ebc715dc7576b2",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "15",
+                "valueType": "num"
+            }
+        ],
+        "x": 580,
+        "y": 220,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "ebc7590d36272479",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "OSD Down",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "97e7fb7803157cac",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "16",
+                "valueType": "num"
+            }
+        ],
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "3819a635efe7ea87",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "OSD Left",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "7576ce0e48fcea71",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "17",
+                "valueType": "num"
+            }
+        ],
+        "x": 580,
+        "y": 340,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "7c4d885012c24c95",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "OSD Right",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "5e3e338b33c575b2",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "18",
+                "valueType": "num"
+            }
+        ],
+        "x": 580,
+        "y": 400,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "cf6ea097474295ba",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "OSD Enter",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "ace70968ab929c9e",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "19",
+                "valueType": "num"
+            }
+        ],
+        "x": 580,
+        "y": 460,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "aacbfc8854063776",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Lip Sync Up",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "8a4d94c389e1e8c1",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "20",
+                "valueType": "num"
+            }
+        ],
+        "x": 590,
+        "y": 520,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "60d019e57dbc2c6c",
+        "type": "ha-button",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Lip Sync Down",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "10b29c5f58071764",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "21",
+                "valueType": "num"
+            }
+        ],
+        "x": 600,
+        "y": 580,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "37c08769fcd1ced5",
+        "type": "ha-select",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Tuner Band",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "01cb7a6dcafbf957",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "9",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 1510,
+        "y": 580,
+        "wires": [
+            [
+                "3e705b68a3f761f3"
+            ]
+        ]
+    },
+    {
+        "id": "9c52af59a28f1218",
+        "type": "ha-select",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Stereo/Mono",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "03d66256b2092406",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 1510,
+        "y": 100,
+        "wires": [
+            [
+                "4f62bfda638575b3"
+            ]
+        ]
+    },
+    {
+        "id": "2258067cd5fbd392",
+        "type": "ha-select",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Store Station Preset",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "8bc87f648f567aa4",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "11",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 1530,
+        "y": 700,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "ce02dd87369e66c4",
+        "type": "ha-select",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Display Mode",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "004e0b7052bcb767",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "13",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 1510,
+        "y": 820,
+        "wires": [
+            [
+                "8c1cc8f5563488d5"
+            ]
+        ]
+    },
+    {
+        "id": "39fc6ee6dacb3804",
+        "type": "ha-select",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Tuner Mode",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "9f9a2e21a69b2aae",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "cmd",
+                "propertyType": "msg",
+                "value": "6",
+                "valueType": "num"
+            },
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            }
+        ],
+        "x": 1510,
+        "y": 280,
+        "wires": [
+            [
+                "b9298c7412bb21d3"
+            ]
+        ]
+    },
+    {
+        "id": "ee52d964905527d1",
+        "type": "ha-binary-sensor",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Searching",
+        "entityConfig": "6f501a101d5a3f55",
+        "version": 0,
+        "state": "$exists(payload.data) ? payload.data : true",
+        "stateType": "jsonata",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1480,
+        "y": 520,
+        "wires": [
+            [
+                "77cbe4492ab79e07"
+            ]
+        ]
+    },
+    {
+        "id": "c54a336e61dbf3c1",
+        "type": "ha-sensor",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Found Frequency",
+        "entityConfig": "4cd17b7d71ab7402",
+        "version": 0,
+        "state": "payload.data != null ? $number(payload.data) / 100 : null",
+        "stateType": "jsonata",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1510,
+        "y": 460,
+        "wires": [
+            [
+                "ab2320f8e13fb870"
+            ]
+        ]
+    },
+    {
+        "id": "2933317d0d1e0923",
+        "type": "debug",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 330,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "6f0ffd74e30b0619",
+        "type": "function",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Assemble command",
+        "func": "const CMD_PREFIX = '#';\nconst CMD_SUFFIX = '\\r';\n\nconst group = String(parseInt(msg.group, 10));\nconst cmd = String(parseInt(msg.cmd, 10)).padStart(2, '0');\n\nlet payload;\nif ('payload' in msg) {\n    \n    payload = `${CMD_PREFIX}${group},${cmd},${String(msg.payload).trim()}${CMD_SUFFIX}`;\n} else {    // no command data\n    payload = `${CMD_PREFIX}${group},${cmd}${CMD_SUFFIX}`;\n}\n\nmsg = { payload: payload };\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1220,
+        "wires": [
+            [
+                "2b82dfaae4d315c0",
+                "fd520b7192c1c8ba"
+            ]
+        ]
+    },
+    {
+        "id": "ffe94c3271c2ef55",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "c460bf8e62300f50",
+        "name": "Group: Source",
+        "rules": [
+            {
+                "t": "set",
+                "p": "group",
+                "pt": "msg",
+                "to": "2",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 860,
+        "y": 400,
+        "wires": [
+            [
+                "6f0ffd74e30b0619"
+            ]
+        ]
+    },
+    {
+        "id": "c3e18c888acfc9c5",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "017a65c2eb565efe",
+        "name": "Group: Audio Processing",
+        "rules": [
+            {
+                "t": "set",
+                "p": "group",
+                "pt": "msg",
+                "to": "4",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1990,
+        "y": 440,
+        "wires": [
+            [
+                "6f0ffd74e30b0619"
+            ]
+        ]
+    },
+    {
+        "id": "887751652342839f",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Group: Tuner",
+        "rules": [
+            {
+                "t": "set",
+                "p": "group",
+                "pt": "msg",
+                "to": "3",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 1460,
+        "wires": [
+            [
+                "6f0ffd74e30b0619"
+            ]
+        ]
+    },
+    {
+        "id": "9b4d4b490135cf47",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Group: Amplifier",
+        "rules": [
+            {
+                "t": "set",
+                "p": "group",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 940,
+        "wires": [
+            [
+                "6f0ffd74e30b0619"
+            ]
+        ]
+    },
+    {
+        "id": "1bbd0438ed382f13",
+        "type": "function",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Preprocess Inbound",
+        "func": "const raw = msg.payload.trim();\nif (!raw || raw.charAt(0) !== '#') {    // empty or wrong format\n    return null;\n}\n\nconst res_ar = raw.substring(1).split(',');\n\nif (res_ar.length < 2 || res_ar.length > 3) {    // should at least contain group and command\n    return null;\n}\n\nconst group = parseInt(res_ar[0], 10);\nconst cmd = parseInt(res_ar[1], 10);\nconst data = res_ar.length == 3 ? res_ar[2] : null;\n\n\nmsg.payload = {\n    group: group,\n    cmd: cmd\n}\n\nif (data) {\n    msg.payload.data = data;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 1560,
+        "wires": [
+            [
+                "b5efd0977abf6232",
+                "2933317d0d1e0923"
+            ]
+        ]
+    },
+    {
+        "id": "fa5badf67352bf1d",
+        "type": "switch",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Route: Amplifier",
+        "property": "payload.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "13",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "14",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "15",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "16",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "17",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "18",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "19",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "20",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "21",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "22",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 19,
+        "x": 280,
+        "y": 1300,
+        "wires": [
+            [],
+            [
+                "d13fd01d29dbc825",
+                "2ab6ca68b13f4205"
+            ],
+            [
+                "d13fd01d29dbc825",
+                "2ab6ca68b13f4205"
+            ],
+            [
+                "46571e4b62ecdff9"
+            ],
+            [
+                "46571e4b62ecdff9"
+            ],
+            [
+                "61289f2157fd13ad"
+            ],
+            [
+                "61289f2157fd13ad"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b8b5f6958fccf44e",
+        "type": "switch",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Route: Source",
+        "property": "payload.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 840,
+        "y": 1580,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c9f5f92a0a7ad0ba",
+        "type": "switch",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Route: Tuner",
+        "property": "payload.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "4",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "7",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "8",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "9",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "11",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "12",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "13",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "14",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "15",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "16",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "17",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 17,
+        "x": 1250,
+        "y": 740,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                "c54a336e61dbf3c1"
+            ],
+            [
+                "ee52d964905527d1"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ff1cc6937b3906f2",
+        "type": "switch",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Route: Processing",
+        "property": "payload.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "6",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 5,
+        "x": 850,
+        "y": 1660,
+        "wires": [
+            [],
+            [
+                "3d1adf4583287ea1"
+            ],
+            [
+                "3d1adf4583287ea1"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "a5ba601e1d1538eb",
+        "type": "switch",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Route: Errors",
+        "property": "payload.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "3",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 830,
+        "y": 1800,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "15fc23638fb5f665",
+        "type": "switch",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Route: Version",
+        "property": "payload.cmd",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "2",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 840,
+        "y": 1740,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "ab2320f8e13fb870",
+        "type": "rbe",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Frequency Change",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.data",
+        "topi": "topic",
+        "x": 1270,
+        "y": 500,
+        "wires": [
+            [
+                "6cc5f608282fcf96"
+            ]
+        ]
+    },
+    {
+        "id": "d53ce8c9919e7e3c",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Process Binary Payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload ? 1 : 0",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 880,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "29ab36ed65b3555b",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "017a65c2eb565efe",
+        "name": "Process Binary Payload",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "msg.payload ? 1 : 0",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1990,
+        "y": 380,
+        "wires": [
+            [
+                "c3e18c888acfc9c5"
+            ]
+        ]
+    },
+    {
+        "id": "f938544aeba62c3b",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Process LFE Value",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$formatInteger($abs($number(msg.payload)), '00')",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 760,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "4f62bfda638575b3",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Process Stereo/Mono",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload = \"Stereo\" ? \"00\" : payload = \"Mono\" ? \"01\" : null",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 1140,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "b9298c7412bb21d3",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Process Tuner Mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload = \"Frequenz\" ? \"00\" : payload = \"Suche\" ? \"01\" : payload = \"Sendeplatz\" ? \"02\" : null",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 1200,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "3e705b68a3f761f3",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Process Tuner Band",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload = \"FM\" ? \"00\" : payload = \"AM\" ? \"01\" : null",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 1260,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "9cdb1b68d7dbfcc4",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Process Tuner PTY",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload = \"Nachrichten\" ? \"01\" : payload = \"Aktuelles\" ? \"02\" : payload = \"Information\" ? \"03\" : payload = \"Sport\" ? \"04\" : payload = \"Bildung\" ? \"05\" : payload = \"Drama\" ? \"06\" : payload = \"Kultur\" ? \"07\" : payload = \"Wissenschaft\" ? \"08\" : payload = \"Gemischt\" ? \"09\" : payload = \"Pop\" ? \"10\" : payload = \"Rock\" ? \"11\" : payload = \"Schlager\" ? \"12\" : payload = \"Unterhaltungsmusik\" ? \"13\" : payload = \"Klassik\" ? \"14\" : payload = \"Andere\" ? \"15\" : \"00\"",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1530,
+        "y": 1320,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "8c1cc8f5563488d5",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Process Display Mode",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload = \"Frequenz\" ? \"01\" : payload = \"Programmname\" ? \"02\" : payload = \"Programmtyp\" ? \"03\" : payload = \"Uhr\" ? \"04\" : payload = \"Radiotext\" ? \"05\" : null",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 1380,
+        "wires": [
+            [
+                "887751652342839f"
+            ]
+        ]
+    },
+    {
+        "id": "c686b778e34ee3bf",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Process Dynamic Range",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload = \"Auto\" ? \"00\" : payload = \"Aus\" ? \"01\" : payload = \"An\" ? \"02\" : null",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 820,
+        "wires": [
+            [
+                "9b4d4b490135cf47"
+            ]
+        ]
+    },
+    {
+        "id": "d5257a0ea5108aab",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "c460bf8e62300f50",
+        "name": "Process Audio Source",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload = \"Analog\" ? \"00\" : payload = \"Digital\" ? \"01\" : payload = \"HDMI\" ? \"02\" : null",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 340,
+        "wires": [
+            [
+                "ffe94c3271c2ef55"
+            ]
+        ]
+    },
+    {
+        "id": "77e15192d8535fce",
+        "type": "change",
+        "z": "3ce791068671bcc1",
+        "g": "c460bf8e62300f50",
+        "name": "Process Input Source",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload = \"BD/DVD\" ? \"01\" : payload = \"Video 1\" ? \"02\" : payload = \"Video 2\" ? \"03\" : payload = \"CD/AUX\" ? \"04\" : payload = \"Tape/MD/CDR\" ? \"05\" : payload = \"Tuner\" ? \"06\" : payload = \"Video 3\" ? \"07\" : payload = \"Direct In\" ? \"08\" : payload = \"TV ARC\" ? \"09\" : null",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 280,
+        "wires": [
+            [
+                "ffe94c3271c2ef55"
+            ]
+        ]
+    },
+    {
+        "id": "77cbe4492ab79e07",
+        "type": "function",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Reset Frequency",
+        "func": "if ('data' in msg.payload) {\n    return null;\n}\n\nmsg = {payload: {data: null}};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1710,
+        "y": 520,
+        "wires": [
+            [
+                "c54a336e61dbf3c1"
+            ]
+        ]
+    },
+    {
+        "id": "6cc5f608282fcf96",
+        "type": "function",
+        "z": "3ce791068671bcc1",
+        "g": "fc1085c71c185896",
+        "name": "Reset Searching",
+        "func": "if (!('data' in msg.payload) || (msg.payload.data == null)) {\n    return null;\n}\n\nmsg.payload.data = false;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1260,
+        "y": 560,
+        "wires": [
+            [
+                "ee52d964905527d1"
+            ]
+        ]
+    },
+    {
+        "id": "5bf8e60463620a89",
+        "type": "debug",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "3d1adf4583287ea1",
+        "type": "ha-sensor",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "Surround Mode Status",
+        "entityConfig": "f836d4eba9c85509",
+        "version": 0,
+        "state": "payload.data",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1280,
+        "y": 1640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d13fd01d29dbc825",
+        "type": "debug",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 500,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "61289f2157fd13ad",
+        "type": "function",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Remove spaces",
+        "func": "let plClean = msg.payload.data.replace(/ /g, \"\");\n\nmsg.payload.data = plClean;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 620,
+        "wires": [
+            [
+                "02ad6f2fe52ecd03"
+            ]
+        ]
+    },
+    {
+        "id": "46571e4b62ecdff9",
+        "type": "function",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Remove spaces",
+        "func": "let plClean = msg.payload.data.replace(/ /g, \"\");\n\nmsg.payload.data = plClean;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 400,
+        "wires": [
+            [
+                "3a77bc46bea43893"
+            ]
+        ]
+    },
+    {
+        "id": "2ab6ca68b13f4205",
+        "type": "function",
+        "z": "3ce791068671bcc1",
+        "g": "d3ec5d3ab5a228f5",
+        "name": "Remove spaces",
+        "func": "let plClean = msg.payload.data.replace(/ /g, \"\");\n\nmsg.payload.data = plClean;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "b197e15d1352352c"
+            ]
+        ]
+    },
+    {
+        "id": "063bd51e5f5ec001",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Power",
+        "version": 6,
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Power"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:power"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "416f403c3d08a097",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Mute",
+        "version": 6,
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Mute"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-mute"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "489972e4e58595b8",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Dynamic Range",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Dynamic Range"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:sine-wave"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "Auto",
+                    "Off",
+                    "On"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "f3e01b3b699df6fd",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Input Source",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Input"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:hdmi-port"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "BD/DVD",
+                    "Video 1",
+                    "Video 2",
+                    "CD/AUX",
+                    "Tape/MD/CDR",
+                    "Tuner",
+                    "Video 3",
+                    "Direct In",
+                    "TV ARC"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "adb98d3efe5a6918",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Audio Source",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Audio Source"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:audio-input-rca"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "Analog",
+                    "Digital",
+                    "HDMI"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "dbf2e2716c3b5def",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Next Input",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Next Input"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:skip-next"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "3dcd649e8865943f",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Freq Up",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Frequency Up"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:arrow-up-bold"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "2dfc1ab9abc9ecc2",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Freq Down",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Frequency Down"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:arrow-down-bold"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "7050a2ca7b9d1dea",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Tuner Up",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Tuner Up"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:arrow-up-bold"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "f35f78dfc9278967",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Tuner Down",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Tuner Down"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:arrow-down-bold"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "69312370d3661be2",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Select Preset",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Select Preset"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:format-list-numbered"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "8c38c37375ef2839",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV PTY",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver PTY"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:format-list-bulleted-type"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "News",
+                    "Affairs",
+                    "Info",
+                    "Sport",
+                    "Educate",
+                    "Drama",
+                    "Culture",
+                    "Science",
+                    "Varied",
+                    "Pop",
+                    "Rock",
+                    "MOR",
+                    "Light",
+                    "Classics",
+                    "Other"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "984209e13b41b8b7",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Get Frequency",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Get Frequency"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "a305d49c9f1c86b4",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "Get Station Name",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Get Station Name"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "858212e35ae8cea7",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Get PTY",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Get PTY"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "d379e93b47181d48",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Stop PTY Select",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Stop PTY Select"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "c730db851fd563ae",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Subwoofer",
+        "version": 6,
+        "entityType": "switch",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Subwoofer"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:music-clef-bass"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "c69105854f220e9b",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Next Surround Mode",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Next Surround Mode"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:surround-sound"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "1853e3761acc2bd8",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Get DD/DTS Mode",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Get DD/DTS Mode"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "c5b7c41191ba69f1",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Analogue Stereo Direct",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Analogue Stereo Direct"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "5c2f59ab7dc1046f",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Volume",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Volume"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-high"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "dB"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "e0cee630aa70af89",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Volume Up",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Volume Up"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-plus"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "b990ed53dcdfd476",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Volume Down",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Volume Down"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-minus"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "5d11a78a5dd65e04",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Bass",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Bass"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:music-clef-bass"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "dB"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "057af03405e119e0",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Treble",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Treble"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:music-clef-treble"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "dB"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "aa6f870c21486d43",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Bass Up",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Bass Up"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-plus"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "7d11e6b3b952c95d",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Bass Down",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Bass Down"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-minus"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "77572f408f344549",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Treble Up",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Treble Up"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-plus"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "851aac6c04dafcc9",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Treble Down",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Treble Down"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-minus"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "7633b124dbf32b1e",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV LFE Trim",
+        "version": 6,
+        "entityType": "number",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver LFE Trim"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:sine-wave"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "dB"
+            },
+            {
+                "property": "min_value",
+                "value": -10
+            },
+            {
+                "property": "max_value",
+                "value": 0
+            },
+            {
+                "property": "step_value",
+                "value": 1
+            },
+            {
+                "property": "mode",
+                "value": "auto"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "4b9557fb16e56516",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV OSD On",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver OSD On"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:fit-to-screen-outline"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "edcd1521f128e0ad",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV OSD Back",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver OSD Back"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "35ebc715dc7576b2",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV OSD Up",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver OSD Up"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "97e7fb7803157cac",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV OSD Down",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver OSD Down"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "7576ce0e48fcea71",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV OSD Left",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver OSD Left"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "5e3e338b33c575b2",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV OSD Right",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver OSD Right"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "ace70968ab929c9e",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV OSD Enter",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver OSD Enter"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "8a4d94c389e1e8c1",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Lip Sync Up",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Lip Sync Up"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "10b29c5f58071764",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Lip Sync Down",
+        "version": 6,
+        "entityType": "button",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Lip Sync Down"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "01cb7a6dcafbf957",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Tuner Band",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Tuner Band"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:radio-fm"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "FM",
+                    "AM"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "03d66256b2092406",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": " Audio Mode",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Audio Mode"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:surround-sound-2-0"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "Stereo",
+                    "Mono"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "8bc87f648f567aa4",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Store Preset",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Store Preset"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:format-list-numbered"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "004e0b7052bcb767",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Display Mode",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Display Mode"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:fit-to-screen"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "Frequency",
+                    "Program Name",
+                    "Program Type",
+                    "Clock time",
+                    "Radiotext"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "9f9a2e21a69b2aae",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Tuner Mode",
+        "version": 6,
+        "entityType": "select",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Tuner Mode"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:knob"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "options",
+                "value": [
+                    "Frequency",
+                    "Search",
+                    "Preset"
+                ]
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "6f501a101d5a3f55",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Tuner Searching",
+        "version": 6,
+        "entityType": "binary_sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Auto Search"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:sine-wave"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "4cd17b7d71ab7402",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "AV Found Frequency",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Found Frequency"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:sine-wave"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": "MHz"
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "f836d4eba9c85509",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "ced6452c75d05324",
+        "name": "Surround Mode",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio AV Receiver Surround Mode Status"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "527e0002.9e78",
+        "type": "server",
+        "name": "Home Assistant",
+        "addon": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "",
+        "connectionDelay": false,
+        "cacheJson": false,
+        "heartbeat": false,
+        "heartbeatInterval": "",
+        "statusSeparator": "",
+        "enableGlobalContextStore": false
+    },
+    {
+        "id": "ced6452c75d05324",
+        "type": "ha-device-config",
+        "name": "AV Receiver",
+        "hwVersion": "",
+        "manufacturer": "Cambridge Audio",
+        "model": "551R",
+        "swVersion": ""
+    }
+]
