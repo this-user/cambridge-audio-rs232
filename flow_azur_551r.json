@@ -3,7 +3,7 @@
         "id": "3ce791068671bcc1",
         "type": "tab",
         "label": "Cambridge Audio AV Receiver",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
@@ -30,16 +30,14 @@
             "1bbd0438ed382f13",
             "fa5badf67352bf1d",
             "b8b5f6958fccf44e",
-            "ff1cc6937b3906f2",
             "a5ba601e1d1538eb",
             "15fc23638fb5f665",
-            "5bf8e60463620a89",
-            "3d1adf4583287ea1",
-            "d13fd01d29dbc825"
+            "d13fd01d29dbc825",
+            "fd520b7192c1c8ba"
         ],
         "x": 8,
         "y": 33,
-        "w": 2144,
+        "w": 2444,
         "h": 1815.5
     },
     {
@@ -145,12 +143,11 @@
             "77cbe4492ab79e07",
             "ab2320f8e13fb870",
             "c9f5f92a0a7ad0ba",
-            "fd520b7192c1c8ba",
             "6cc5f608282fcf96"
         ],
-        "x": 1034,
+        "x": 1154,
         "y": 59,
-        "w": 792,
+        "w": 672,
         "h": 1442
     },
     {
@@ -168,12 +165,14 @@
             "2b9a786528e78be6",
             "76c74fd97465f0ea",
             "c3e18c888acfc9c5",
-            "29ab36ed65b3555b"
+            "29ab36ed65b3555b",
+            "ff1cc6937b3906f2",
+            "3d1adf4583287ea1"
         ],
-        "x": 1834,
+        "x": 1874,
         "y": 59,
-        "w": 292,
-        "h": 422
+        "w": 552,
+        "h": 482
     },
     {
         "id": "b5efd0977abf6232",
@@ -240,24 +239,6 @@
                 "a5ba601e1d1538eb"
             ]
         ]
-    },
-    {
-        "id": "fd520b7192c1c8ba",
-        "type": "debug",
-        "z": "3ce791068671bcc1",
-        "g": "fc1085c71c185896",
-        "name": "debug 3",
-        "active": false,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": true,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "payload",
-        "statusType": "auto",
-        "x": 1130,
-        "y": 1260,
-        "wires": []
     },
     {
         "id": "d314aa6fadbf8e5a",
@@ -827,7 +808,7 @@
                 "valueType": "entityState"
             }
         ],
-        "x": 1920,
+        "x": 2220,
         "y": 100,
         "wires": [
             [
@@ -856,7 +837,7 @@
                 "valueType": "num"
             }
         ],
-        "x": 1950,
+        "x": 2250,
         "y": 160,
         "wires": [
             [
@@ -882,8 +863,8 @@
                 "valueType": "num"
             }
         ],
-        "x": 1950,
-        "y": 220,
+        "x": 2250,
+        "y": 280,
         "wires": [
             [
                 "c3e18c888acfc9c5"
@@ -908,8 +889,8 @@
                 "valueType": "num"
             }
         ],
-        "x": 1960,
-        "y": 280,
+        "x": 2260,
+        "y": 340,
         "wires": [
             [
                 "c3e18c888acfc9c5"
@@ -1715,8 +1696,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1990,
-        "y": 440,
+        "x": 2290,
+        "y": 500,
         "wires": [
             [
                 "6f0ffd74e30b0619"
@@ -1976,7 +1957,7 @@
         "repair": false,
         "outputs": 3,
         "x": 840,
-        "y": 1580,
+        "y": 1680,
         "wires": [
             [],
             [],
@@ -2111,7 +2092,7 @@
         "id": "ff1cc6937b3906f2",
         "type": "switch",
         "z": "3ce791068671bcc1",
-        "g": "ddbb14922d2337c0",
+        "g": "017a65c2eb565efe",
         "name": "Route: Processing",
         "property": "payload.cmd",
         "propertyType": "msg",
@@ -2145,8 +2126,8 @@
         "checkall": "false",
         "repair": false,
         "outputs": 5,
-        "x": 850,
-        "y": 1660,
+        "x": 1990,
+        "y": 300,
         "wires": [
             [],
             [
@@ -2294,8 +2275,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1990,
-        "y": 380,
+        "x": 2290,
+        "y": 440,
         "wires": [
             [
                 "c3e18c888acfc9c5"
@@ -2369,7 +2350,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "payload = \"Frequenz\" ? \"00\" : payload = \"Suche\" ? \"01\" : payload = \"Sendeplatz\" ? \"02\" : null",
+                "to": "payload = \"Frequency\" ? \"00\" : payload = \"Search\" ? \"01\" : payload = \"Preset\" ? \"02\" : null",
                 "tot": "jsonata"
             }
         ],
@@ -2425,7 +2406,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "payload = \"Nachrichten\" ? \"01\" : payload = \"Aktuelles\" ? \"02\" : payload = \"Information\" ? \"03\" : payload = \"Sport\" ? \"04\" : payload = \"Bildung\" ? \"05\" : payload = \"Drama\" ? \"06\" : payload = \"Kultur\" ? \"07\" : payload = \"Wissenschaft\" ? \"08\" : payload = \"Gemischt\" ? \"09\" : payload = \"Pop\" ? \"10\" : payload = \"Rock\" ? \"11\" : payload = \"Schlager\" ? \"12\" : payload = \"Unterhaltungsmusik\" ? \"13\" : payload = \"Klassik\" ? \"14\" : payload = \"Andere\" ? \"15\" : \"00\"",
+                "to": "payload = \"News\" ? \"01\" : payload = \"Affairs\" ? \"02\" : payload = \"Info\" ? \"03\" : payload = \"Sport\" ? \"04\" : payload = \"Educate\" ? \"05\" : payload = \"Drama\" ? \"06\" : payload = \"Culture\" ? \"07\" : payload = \"Science\" ? \"08\" : payload = \"Varied\" ? \"09\" : payload = \"Pop\" ? \"10\" : payload = \"Rock\" ? \"11\" : payload = \"MOR\" ? \"12\" : payload = \"Light\" ? \"13\" : payload = \"Classics\" ? \"14\" : payload = \"Other\" ? \"15\" : \"00\"",
                 "tot": "jsonata"
             }
         ],
@@ -2453,7 +2434,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "payload = \"Frequenz\" ? \"01\" : payload = \"Programmname\" ? \"02\" : payload = \"Programmtyp\" ? \"03\" : payload = \"Uhr\" ? \"04\" : payload = \"Radiotext\" ? \"05\" : null",
+                "to": "payload = \"Frequency\" ? \"01\" : payload = \"Program Name\" ? \"02\" : payload = \"Program Type\" ? \"03\" : payload = \"Clock time\" ? \"04\" : payload = \"Radiotext\" ? \"05\" : null",
                 "tot": "jsonata"
             }
         ],
@@ -2481,7 +2462,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "payload = \"Auto\" ? \"00\" : payload = \"Aus\" ? \"01\" : payload = \"An\" ? \"02\" : null",
+                "to": "payload = \"Auto\" ? \"00\" : payload = \"Off\" ? \"01\" : payload = \"On\" ? \"02\" : null",
                 "tot": "jsonata"
             }
         ],
@@ -2597,27 +2578,10 @@
         ]
     },
     {
-        "id": "5bf8e60463620a89",
-        "type": "debug",
-        "z": "3ce791068671bcc1",
-        "g": "ddbb14922d2337c0",
-        "name": "debug 2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 1480,
-        "wires": []
-    },
-    {
         "id": "3d1adf4583287ea1",
         "type": "ha-sensor",
         "z": "3ce791068671bcc1",
-        "g": "ddbb14922d2337c0",
+        "g": "017a65c2eb565efe",
         "name": "Surround Mode Status",
         "entityConfig": "f836d4eba9c85509",
         "version": 0,
@@ -2626,8 +2590,8 @@
         "attributes": [],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1280,
-        "y": 1640,
+        "x": 2240,
+        "y": 220,
         "wires": [
             []
         ]
@@ -2638,7 +2602,7 @@
         "z": "3ce791068671bcc1",
         "g": "ddbb14922d2337c0",
         "name": "debug 4",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": true,
         "tostatus": true,
@@ -2656,7 +2620,7 @@
         "z": "3ce791068671bcc1",
         "g": "d3ec5d3ab5a228f5",
         "name": "Remove spaces",
-        "func": "let plClean = msg.payload.data.replace(/ /g, \"\");\n\nmsg.payload.data = plClean;\n\nreturn msg;",
+        "func": "const plClean = msg.payload.data.replace(/ /g, \"\");\n\nmsg.payload.data = plClean;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2677,7 +2641,7 @@
         "z": "3ce791068671bcc1",
         "g": "d3ec5d3ab5a228f5",
         "name": "Remove spaces",
-        "func": "let plClean = msg.payload.data.replace(/ /g, \"\");\n\nmsg.payload.data = plClean;\n\nreturn msg;",
+        "func": "const plClean = msg.payload.data.replace(/ /g, \"\");\n\nmsg.payload.data = plClean;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2698,7 +2662,7 @@
         "z": "3ce791068671bcc1",
         "g": "d3ec5d3ab5a228f5",
         "name": "Remove spaces",
-        "func": "let plClean = msg.payload.data.replace(/ /g, \"\");\n\nmsg.payload.data = plClean;\n\nreturn msg;",
+        "func": "const plClean = msg.payload.data.replace(/ /g, \"\");\n\nmsg.payload.data = plClean;\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -2712,6 +2676,24 @@
                 "b197e15d1352352c"
             ]
         ]
+    },
+    {
+        "id": "fd520b7192c1c8ba",
+        "type": "debug",
+        "z": "3ce791068671bcc1",
+        "g": "ddbb14922d2337c0",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 810,
+        "y": 1160,
+        "wires": []
     },
     {
         "id": "063bd51e5f5ec001",
