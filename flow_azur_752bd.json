@@ -1,0 +1,1792 @@
+[
+    {
+        "id": "f9bb35b4fee62ea2",
+        "type": "tab",
+        "label": "Cambridge Audio BluRay Player",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "eccaa5c78d84e3bb",
+        "type": "group",
+        "z": "f9bb35b4fee62ea2",
+        "name": "Cambridge BluRay Player Control",
+        "style": {
+            "label": true,
+            "fill": "#e3f3e3",
+            "color": "#000000"
+        },
+        "nodes": [
+            "96055024ef3991b1",
+            "ab56ccbcaef56e42",
+            "282c947c2fda5405",
+            "cafd520877a9c8f7",
+            "14caa36b1818eaaa",
+            "9092c3c99e88e94e",
+            "f36cde99f04a8e49",
+            "58ac11644a5a396b",
+            "67f9545e33a7704c",
+            "95afa84fc2486ef6",
+            "95cb07575051f9ed",
+            "adcf072a9e8d358a",
+            "a203542e419fc15c",
+            "3775043d56cb8dae",
+            "c61b6c04e25b4a22",
+            "3ae7f05e79ebf77c",
+            "255d7606556aa340",
+            "40e231afcfa3df2b",
+            "799cb99159271d98",
+            "821e8abe79ee3dc2",
+            "e29dc2920ae272f0",
+            "de939d05e1b73e19",
+            "bd57b66452ebe52d",
+            "b7c5b3e0da03a541",
+            "b42c9c362734651d",
+            "766c0bd9f319ec19",
+            "1a5974e665fd1430",
+            "315253268693322c",
+            "9011c3c4d07b0e71",
+            "f071d1921e58247e",
+            "69aa4b3552885ca3",
+            "57fd5c68bd34b58f",
+            "fc2819c0a16f997b",
+            "2f09d7b54a0f02aa",
+            "a003a9fb4fc57b96",
+            "b25c805de602d64c"
+        ],
+        "x": 54,
+        "y": 39,
+        "w": 1432,
+        "h": 1282
+    },
+    {
+        "id": "96055024ef3991b1",
+        "type": "function",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Process cmd",
+        "func": "if (!msg.payload) {\n    return null;\n}\n\nconst CMD_PREFIX = '#';\nconst CMD_SUFFIX = '\\r';\n\nmsg.payload = CMD_PREFIX + msg.payload + CMD_SUFFIX;\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 200,
+        "wires": [
+            [
+                "9092c3c99e88e94e"
+            ]
+        ]
+    },
+    {
+        "id": "ab56ccbcaef56e42",
+        "type": "inject",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "On Start: Set Verbose Mode 3",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "SVM 3",
+        "payloadType": "str",
+        "x": 230,
+        "y": 100,
+        "wires": [
+            [
+                "3775043d56cb8dae"
+            ]
+        ]
+    },
+    {
+        "id": "282c947c2fda5405",
+        "type": "function",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Preprocess Inbound",
+        "func": "const raw = msg.payload.trim();\nif (!raw || raw.charAt(0) !== '@') {\n    // Not a valid response or update, ignore it.\n    return null;\n}\n\nconst reCmdRes = /[A-Z0-9]{3}\\s(OK|ER)(?:\\s\\S+)?/g;\n\nconst mtype = reCmdRes.test(raw) ? 'CMD' : 'STATUS';\n\nmsg.payload = {\n    type: mtype,\n    msg: raw.substring(1),\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 380,
+        "wires": [
+            [
+                "cafd520877a9c8f7"
+            ]
+        ]
+    },
+    {
+        "id": "cafd520877a9c8f7",
+        "type": "switch",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Route Inbound",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "STATUS",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "CMD",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 720,
+        "y": 460,
+        "wires": [
+            [
+                "58ac11644a5a396b"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "14caa36b1818eaaa",
+        "type": "debug",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 430,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "9092c3c99e88e94e",
+        "type": "tcp request",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "BluRay Player",
+        "server": "192.168.178.12",
+        "port": "26",
+        "out": "sit",
+        "ret": "string",
+        "splitc": " ",
+        "newline": "\\r",
+        "trim": false,
+        "tls": "",
+        "x": 680,
+        "y": 300,
+        "wires": [
+            [
+                "282c947c2fda5405"
+            ]
+        ]
+    },
+    {
+        "id": "f36cde99f04a8e49",
+        "type": "inject",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Conn Keepalive",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "QPW",
+        "payloadType": "str",
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "3775043d56cb8dae"
+            ]
+        ]
+    },
+    {
+        "id": "58ac11644a5a396b",
+        "type": "function",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Parse Status Updates",
+        "func": "const source_list = ['Blu-Ray Player', \n                    'HDMI-FRONT', \n                    'HDMI-BACK', \n                    'ARC-HDMI-OUT 1', \n                    'ARC-HDMI-OUT 2', \n                    'OPTICAL', \n                    'COAXIAL'];\n\nconst time_code_types = {'E': 'Total Elapsed Time', \n                            'R': 'Total Remaining Time', \n                            'T': 'Total Elapsed Time', \n                            'X': 'Title Remaining Time',\n                            'C': 'Chapter/Track Elapsed Time',\n                            'K': 'Chapter/Track Remaining Time'}\n\nconst resolutions = {'_480I60': '480i 60/59.94Hz', \n                    '_480P60': '480p 60/59.94Hz', \n                    '_576I50': '576i 50Hz',\n                    '_576P50': '576p 50Hz',\n                    '_720P60': '720p 60/59.94Hz',\n                    '_720P50': '720p 50Hz',\n                    '1080I60': '1080i 60/59.94Hz',\n                    '1080I50': '1080i 50Hz',\n                    '1080P60': '1080p 60/59.94Hz',\n                    '1080P50': '1080p 50Hz',\n                    '1080P24': '1080p 24Hz',\n                    '1080P23': '1080p 23.97Hz',\n}\n\nconst raw = msg.payload.msg;\n\nconst parts = raw.split(' ');\nconst code = parts[0];\n\nlet type = null;\nlet payload = null;\n\nswitch (code) {\n    case 'UPW': // Power Status Update\n        type = 'POWER_STATUS';\n        payload = parts[1] === '1';\n        break;\n    case 'UPL': // Playback Status Update\n        type = 'PLAYBACK_STATUS';\n        switch(parts[1]) {\n            case 'DISC': payload = 'NO_DISC'; break;\n            case 'LOAD': payload = 'LOADING_DISC'; break;\n            case 'OPEN': payload = 'TRAY_OPEN'; break;\n            case 'CLOS': payload = 'TRAY_CLOSING'; break;\n            case 'PLAY': payload = 'PLAYING'; break;\n            case 'PAUS': payload = 'PAUSED'; break;\n            case 'STOP': payload = 'STOPPED'; break;\n            case 'STPF': payload = 'STEP_FORWARD'; break;\n            case 'STPR': payload = 'STEP_REVERSE'; break;\n            case 'FFWn': payload = 'FAST_FORWARD'; break;\n            case 'FRVn': payload = 'FAST_REVERSE'; break;\n            case 'SFWn': payload = 'SLOW_FORWARD'; break;\n            case 'SRVn': payload = 'SLOW_REVERSE'; break;\n            case 'HOME': payload = 'HOME_MENU'; break;\n            case 'MCTR': payload = 'MEDIA_CENTRE'; break;\n            default: \n                type = null;\n                payload = null;\n                break;\n        }\n        break;\n    case 'UVL': // Volume Level Update\n        type = 'VOLUME_LEVEL';\n        if (parts[1] === 'MUT') {\n            payload = {muted: true, level: null};\n        } else {\n            payload = {muted: false, level: parseFloat(parts[1]) / 100};\n        }\n        break;\n    case 'UDT': // Disc Type Update\n        type = 'DISC_TYPE';\n        switch (parts[1]) {\n            case 'BDMV': payload = 'Blu-ray'; break;\n            case 'DVDV': payload = 'DVD-Video'; break;\n            case 'DVDA': payload = 'DVD-Audio'; break;\n            case 'SACD': payload = 'Super Audio CD'; break;\n            case 'CDDA': payload = 'Audio CD'; break;\n            case 'HDCD': payload = 'HDCD'; break;\n            case 'DATA': payload = 'Data Disc'; break;\n            case 'CVD2': payload = 'VCD 2.0'; break;\n            case 'SCVD': payload = 'SVCD'; break;\n            default:\n                type = null;\n                payload = null;\n                break;\n        }\n        break;\n    case 'UAT': // Audio Type Update\n        type = 'AUDIO_TYPE';\n        let atype = null;\n        switch (parts[1]) {\n            case 'DD': atype = 'Dolby Digital'; break;\n            case 'DP': atype = 'Dolby Digital Plus'; break;\n            case 'DT': atype = 'Dolby TrueHD'; break;\n            case 'TS': atype = 'DTS'; break;\n            case 'TH': atype = 'DTS-HD High Resolution'; break;\n            case 'TM': atype = 'DTS-HD Master Audio'; break;\n            case 'PC': atype = 'LPCM'; break;\n            case 'MP': atype = 'MPEG Audio'; break;\n            case 'CD': atype = 'CD Audio'; break;\n            case 'UN': atype = 'Unknown'; break;\n            default:\n                type = null;\n                payload = null;\n                break;\n        }\n        if (type) {\n            const track = parts[2];\n            const lang = parts[3] === 'UNK' ? 'UNKNOWN' : parts[3];\n            const chan = parts[4];\n            payload = {audio_type: atype, track: track, language: lang, channels: chan};\n        }\n        break;\n    case 'UST': // Subtitle Type Update\n        type = 'SUBTITLE_TYPE';\n        const track = parts[1].split('/');\n        const track_cur = track[0];\n        const track_avail = track[1];\n        const subs_available = track_avail != '00';\n        const subs_enabled = subs_available && (track_cur === '00');\n        const lang = !subs_available ? '-' : (parts[2] === 'UNK' ? 'UNKNOWN' : parts[2]);\n        payload = { subs_available: subs_available, subs_enabled: subs_enabled, track: track, language: lang };\n        break;\n    case 'UIS': // Input Source Update\n        type = 'INPUT_SOURCE';\n        const input = source_list[parseInt(parts[1])];\n        payload = input;\n        break;\n    case 'UTC': // Time Code Update\n        type = 'TIME_CODE';\n        const title = parseInt(parts[1]);\n        const chapter = parseInt(parts[2]);\n        const tc_type = parts[3];\n        const time_code = parts[4];\n        payload = { type_code: tc_type, type: time_code_types[tc_type], title: title,  chapter: chapter, time_code: time_code };\n        break;\n    case 'UVO': // Video Resolution Update\n        type = 'VIDEO_RESOLUTION';\n        const res_in = parts[1] in resolutions ? resolutions[parts[1]] : parts[1];\n        const res_out = parts[2] in resolutions ? resolutions[parts[2]] : parts[2];\n        payload = { res_in: res_in, res_out: res_out };\n        break;\n}\n\nif (!type) {\n    return null;\n}\n\nmsg = { type: type, payload: payload };\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 560,
+        "wires": [
+            [
+                "67f9545e33a7704c"
+            ]
+        ]
+    },
+    {
+        "id": "67f9545e33a7704c",
+        "type": "switch",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Route Update",
+        "property": "type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "POWER_STATUS",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "PLAYBACK_STATUS",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "VOLUME_LEVEL",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "DISC_TYPE",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "AUDIO_TYPE",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SUBTITLE_TYPE",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "INPUT_SOURCE",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "TIME_CODE",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "VIDEO_RESOLUTION",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 9,
+        "x": 1020,
+        "y": 740,
+        "wires": [
+            [
+                "f071d1921e58247e"
+            ],
+            [
+                "40e231afcfa3df2b"
+            ],
+            [
+                "b7c5b3e0da03a541",
+                "b42c9c362734651d"
+            ],
+            [
+                "255d7606556aa340"
+            ],
+            [
+                "799cb99159271d98",
+                "766c0bd9f319ec19",
+                "1a5974e665fd1430",
+                "315253268693322c"
+            ],
+            [
+                "821e8abe79ee3dc2",
+                "9011c3c4d07b0e71",
+                "69aa4b3552885ca3",
+                "57fd5c68bd34b58f"
+            ],
+            [
+                "e29dc2920ae272f0"
+            ],
+            [
+                "de939d05e1b73e19",
+                "2f09d7b54a0f02aa",
+                "a003a9fb4fc57b96",
+                "b25c805de602d64c"
+            ],
+            [
+                "bd57b66452ebe52d",
+                "fc2819c0a16f997b"
+            ]
+        ]
+    },
+    {
+        "id": "95afa84fc2486ef6",
+        "type": "switch",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Route Power State",
+        "property": "payload.state",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 1010,
+        "y": 180,
+        "wires": [
+            [
+                "a203542e419fc15c"
+            ],
+            [
+                "95cb07575051f9ed",
+                "adcf072a9e8d358a"
+            ]
+        ]
+    },
+    {
+        "id": "95cb07575051f9ed",
+        "type": "function",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Reset Data L1",
+        "func": "// Wipe out data on power off\nmsg.payload = null;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 260,
+        "wires": [
+            [
+                "255d7606556aa340",
+                "40e231afcfa3df2b",
+                "e29dc2920ae272f0"
+            ]
+        ]
+    },
+    {
+        "id": "adcf072a9e8d358a",
+        "type": "function",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Reset Data L2",
+        "func": "// Wipe out data on power off\nmsg.payload = { level: null, \n                muted: null, \n                audio_type: null, \n                track: null, \n                language: null, \n                channels: null, \n                subs_available: null,\n                subs_enabled: null,\n                time_code: null,\n                title: null,\n                chapter: null,\n                type: null,\n                res_in: null,\n                res_out: null };\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 320,
+        "wires": [
+            [
+                "799cb99159271d98",
+                "821e8abe79ee3dc2",
+                "de939d05e1b73e19",
+                "bd57b66452ebe52d",
+                "b7c5b3e0da03a541",
+                "b42c9c362734651d",
+                "766c0bd9f319ec19",
+                "1a5974e665fd1430",
+                "315253268693322c",
+                "9011c3c4d07b0e71",
+                "69aa4b3552885ca3",
+                "57fd5c68bd34b58f",
+                "fc2819c0a16f997b",
+                "2f09d7b54a0f02aa",
+                "a003a9fb4fc57b96",
+                "b25c805de602d64c"
+            ]
+        ]
+    },
+    {
+        "id": "a203542e419fc15c",
+        "type": "function",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Update Player State",
+        "func": "// Send query messages for most of the state\nconst messages = [\n    { payload: \"QVL\" },\n    { payload: \"QPL\" },\n    { payload: \"QIS\" },\n    { payload: \"QHD\" },\n    { payload: \"QDT\" },\n    { payload: \"QAT\" },\n    { payload: \"QTK\" },\n    { payload: \"QCH\" },\n    { payload: \"QAT\" },\n    { payload: \"QST\" },\n];\n\nmessages.forEach((msg, index) => {\n    node.send(msg);\n});\n\nreturn null;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "3775043d56cb8dae"
+            ]
+        ]
+    },
+    {
+        "id": "3775043d56cb8dae",
+        "type": "delay",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "4",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "96055024ef3991b1",
+                "14caa36b1818eaaa"
+            ]
+        ]
+    },
+    {
+        "id": "c61b6c04e25b4a22",
+        "type": "rbe",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "State Change Filter",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": false,
+        "property": "payload.state",
+        "topi": "topic",
+        "x": 1010,
+        "y": 80,
+        "wires": [
+            [
+                "95afa84fc2486ef6"
+            ]
+        ]
+    },
+    {
+        "id": "3ae7f05e79ebf77c",
+        "type": "ha-text",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Cmd Buffer",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "2b65c0b3741d4fa9",
+        "exposeAsEntityConfig": "",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "value"
+            },
+            {
+                "property": "previousValue",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "previousValue"
+            }
+        ],
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "3775043d56cb8dae"
+            ]
+        ]
+    },
+    {
+        "id": "255d7606556aa340",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Disc Type",
+        "entityConfig": "081655a93df2120b",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1300,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40e231afcfa3df2b",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Playback Status",
+        "entityConfig": "c082607e9b8ac6ad",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1320,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "799cb99159271d98",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Audio Type",
+        "entityConfig": "3082100924db2d9a",
+        "version": 0,
+        "state": "payload.audio_type",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1310,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "821e8abe79ee3dc2",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Subtitle Track",
+        "entityConfig": "431d7953308d4d79",
+        "version": 0,
+        "state": "payload.track",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1320,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e29dc2920ae272f0",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Input Source",
+        "entityConfig": "2f27f19bcc2faf71",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1310,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "de939d05e1b73e19",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Time Code",
+        "entityConfig": "711daf3d1589aa59",
+        "version": 0,
+        "state": "payload.time_code",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1310,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bd57b66452ebe52d",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Video Resolution Input",
+        "entityConfig": "50b8f592f53a03c6",
+        "version": 0,
+        "state": "payload.res_in",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1340,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b7c5b3e0da03a541",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Volume",
+        "entityConfig": "b23a3a0a1ffc8a92",
+        "version": 0,
+        "state": "payload.level",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1300,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b42c9c362734651d",
+        "type": "ha-binary-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Muted",
+        "entityConfig": "1b593890981bc07c",
+        "version": 0,
+        "state": "payload.muted",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1290,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "766c0bd9f319ec19",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Audio Track",
+        "entityConfig": "4b6fbbb2eca59c72",
+        "version": 0,
+        "state": "payload.track",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1310,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a5974e665fd1430",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Audio Language",
+        "entityConfig": "afcf5599b79c7cf9",
+        "version": 0,
+        "state": "payload.language",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1320,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "315253268693322c",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Audio Channels",
+        "entityConfig": "24269de28db21029",
+        "version": 0,
+        "state": "payload.channels",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1320,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9011c3c4d07b0e71",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Subtitle Language",
+        "entityConfig": "056314a49128ef6d",
+        "version": 0,
+        "state": "payload.language",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1330,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f071d1921e58247e",
+        "type": "ha-binary-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Power",
+        "entityConfig": "efcca219625f6fbe",
+        "version": 0,
+        "state": "payload",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [
+            {
+                "property": "payload",
+                "propertyType": "msg",
+                "value": "",
+                "valueType": "data"
+            }
+        ],
+        "x": 1290,
+        "y": 140,
+        "wires": [
+            [
+                "c61b6c04e25b4a22"
+            ]
+        ]
+    },
+    {
+        "id": "69aa4b3552885ca3",
+        "type": "ha-binary-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Subtitles Available",
+        "entityConfig": "9649cdc2d488b0a3",
+        "version": 0,
+        "state": "payload.subs_available",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1330,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "57fd5c68bd34b58f",
+        "type": "ha-binary-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Subtitles Enabled",
+        "entityConfig": "74caf17816dfa44b",
+        "version": 0,
+        "state": "payload.subs_enabled",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1330,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fc2819c0a16f997b",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Video Resolution Output",
+        "entityConfig": "e3351089a6287c94",
+        "version": 0,
+        "state": "payload.res_out",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1350,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2f09d7b54a0f02aa",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Title",
+        "entityConfig": "dc63dda8019e9c12",
+        "version": 0,
+        "state": "payload.title",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1290,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a003a9fb4fc57b96",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Chapter",
+        "entityConfig": "f684d4fc38464f7a",
+        "version": 0,
+        "state": "payload.chapter",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1300,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b25c805de602d64c",
+        "type": "ha-sensor",
+        "z": "f9bb35b4fee62ea2",
+        "g": "eccaa5c78d84e3bb",
+        "name": "Time Code Type",
+        "entityConfig": "99860e7ff022aa9d",
+        "version": 0,
+        "state": "payload.type",
+        "stateType": "msg",
+        "attributes": [],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1320,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b65c0b3741d4fa9",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Command Buffer",
+        "version": 6,
+        "entityType": "text",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio BluRay Command Buffer"
+            },
+            {
+                "property": "icon",
+                "value": ""
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "mode",
+                "value": "text"
+            },
+            {
+                "property": "min_length",
+                "value": ""
+            },
+            {
+                "property": "max_length",
+                "value": ""
+            },
+            {
+                "property": "pattern",
+                "value": "[A-Z0-9]{3}(?:\\s\\S+)?"
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "081655a93df2120b",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Disc Type",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Disc Type"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:disc"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "c082607e9b8ac6ad",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Playback Status",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Playback Status"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:play-pause"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": true,
+        "debugEnabled": false
+    },
+    {
+        "id": "3082100924db2d9a",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Audio Type",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Audio Type"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:dolby"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "431d7953308d4d79",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Subtitle Track",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Subtitle Track"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:subtitles"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "2f27f19bcc2faf71",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Input Source",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Input Source"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:video-input-hdmi"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "711daf3d1589aa59",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Time Code",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Time Code"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:timeline-clock"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "50b8f592f53a03c6",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Video Resolution Input",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Video Resolution Input"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:video-high-definition"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "b23a3a0a1ffc8a92",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Volume",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Volume"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-high"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "1b593890981bc07c",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Muted",
+        "version": 6,
+        "entityType": "binary_sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Muted"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:volume-mute"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "4b6fbbb2eca59c72",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Audio Track",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Audio Track"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:waveform"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "afcf5599b79c7cf9",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Audio Language",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Audio Language"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:translate"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "24269de28db21029",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Audio Channels",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Audio Channels"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:surround-sound-5-1"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "056314a49128ef6d",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Subtitle Language",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Subtitle Language"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:google-translate"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "efcca219625f6fbe",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Power Status",
+        "version": 6,
+        "entityType": "binary_sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Power Status"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:power"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "9649cdc2d488b0a3",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Subtitles Available",
+        "version": 6,
+        "entityType": "binary_sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Subtitles Available"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:subtitles"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "74caf17816dfa44b",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Subitles Enabled",
+        "version": 6,
+        "entityType": "binary_sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Subitles Enabled"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:subtitles"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": ""
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "e3351089a6287c94",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Video Resolution Output",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Video Resolution Output"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:video-high-definition"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "dc63dda8019e9c12",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Title",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Title"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:format-title"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "f684d4fc38464f7a",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Chapter",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Chapter"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:numeric"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "99860e7ff022aa9d",
+        "type": "ha-entity-config",
+        "server": "527e0002.9e78",
+        "deviceConfig": "d7f04ac96022b86b",
+        "name": "Time Code Type",
+        "version": 6,
+        "entityType": "sensor",
+        "haConfig": [
+            {
+                "property": "name",
+                "value": "Cambridge Audio Blu-Ray Time Code Type"
+            },
+            {
+                "property": "icon",
+                "value": "mdi:timeline-clock"
+            },
+            {
+                "property": "entity_picture",
+                "value": ""
+            },
+            {
+                "property": "entity_category",
+                "value": "diagnostic"
+            },
+            {
+                "property": "device_class",
+                "value": ""
+            },
+            {
+                "property": "unit_of_measurement",
+                "value": ""
+            },
+            {
+                "property": "state_class",
+                "value": ""
+            }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "527e0002.9e78",
+        "type": "server",
+        "name": "Home Assistant",
+        "addon": true,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "",
+        "connectionDelay": false,
+        "cacheJson": false,
+        "heartbeat": false,
+        "heartbeatInterval": "",
+        "statusSeparator": "",
+        "enableGlobalContextStore": false
+    },
+    {
+        "id": "d7f04ac96022b86b",
+        "type": "ha-device-config",
+        "name": "BluRay Player",
+        "hwVersion": "",
+        "manufacturer": "Cambridge Audio",
+        "model": "752BD",
+        "swVersion": ""
+    }
+]
